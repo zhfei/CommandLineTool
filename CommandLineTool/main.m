@@ -12,8 +12,12 @@
 int main(int argc, char * argv[]) {
     @autoreleasepool {
         
+        NSString *appPath = @"";
+        NSFileHandle *fileHandle = [NSFileHandle fileHandleForReadingAtPath:appPath];
+        
         NSLog(@"hello...............\n");
         
+        [fileHandle closeFile];
         return 0;
     }
 }
