@@ -11,10 +11,23 @@
 #import <mach-o/fat.h>
 #import <mach-o/loader.h>
 
-//
 
+/*
+ argc: 参数个数
+ argv: 参数数组
+ argv[0]: 当前可执行文件的路径
+ */
 int main(int argc, char * argv[]) {
     @autoreleasepool {
+        if (argc == 1) {
+            printf("-l 查看mach-o文件信息\n");
+            return 0;
+        }
+        
+        if (strcmp(argv[1], "-l") != 0) {
+            printf("-l 查看mach-o文件信息\n");
+            return 0;
+        }
         
         //手机内没有被越狱app的Mach-O文件路径
         NSString *appPath = @"/var/containers/Bundle/Application/DBA6CFE6-7180-4638-A703-49387F0C0806/aisiweb.app/aisiweb";
