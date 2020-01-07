@@ -4,7 +4,14 @@
 //
 //  Created by 周飞 on 2020/1/6.
 //  Copyright © 2020年 zhf. All rights reserved.
-//
+//1
+//如果想在线调试mach-o启动是的入参，可以在scheme上进行设置
+//Edit Scheme -> Run -> Arguments -> Arguments Passed On Launch
+//Arguments Passed On Launch列表上添加想要的入参
+
+//2.另外
+//Build Phases 下，点击左上角的“+”， 添加Run Script
+//就可以在编译阶段，添加自定义脚本，自动完成需要的额外操作
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
@@ -17,6 +24,7 @@
  argv: 参数数组
  argv[0]: 当前可执行文件的路径
  */
+
 int main(int argc, char * argv[]) {
     @autoreleasepool {
         if (argc == 1) {
